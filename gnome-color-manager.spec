@@ -12,7 +12,9 @@ Source0:   http://download.gnome.org/sources/gnome-color-manager/2.29/%{name}-%{
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
 Requires:  gnome-icon-theme
-Requires:  argyllcms
+Requires:  packagekit
+Requires:  shared-color-profiles
+Requires:  ldetect-lst >= 0.1.282
 
 BuildRequires: gtk2-devel
 BuildRequires: rarian
@@ -29,6 +31,8 @@ BuildRequires: dbus-glib-devel >= %{dbus_glib_version}
 BuildRequires: libxxf86vm-devel
 BuildRequires: libxrandr-devel
 BuildRequires: gnome-desktop-devel
+BuildRequires: packagekit
+BuildRequires: lcms-devel
 
 %description
 gnome-color-manager is a session framework that makes it easy to manage, 
@@ -38,7 +42,7 @@ install and generate color profiles in the GNOME desktop.
 %setup -q
 
 %build
-%configure2_5x --disable-scrollkeeper --disable-schemas-install
+%configure2_5x --disable-scrollkeeper --disable-schemas-install --enable-hardware-detection
 %make 
 
 %install
