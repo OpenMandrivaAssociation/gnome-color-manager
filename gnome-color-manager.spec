@@ -33,6 +33,7 @@ BuildRequires: libxrandr-devel
 BuildRequires: gnome-desktop-devel
 BuildRequires: packagekit
 BuildRequires: lcms-devel
+BuildRequires: docbook-utils
 
 %description
 gnome-color-manager is a session framework that makes it easy to manage, 
