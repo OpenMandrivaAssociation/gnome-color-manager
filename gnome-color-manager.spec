@@ -34,6 +34,7 @@ BuildRequires: gnome-desktop-devel
 BuildRequires: packagekit
 BuildRequires: lcms-devel
 BuildRequires: docbook-utils
+BuildRequires: docbook-dtd41-sgml
 
 %description
 gnome-color-manager is a session framework that makes it easy to manage, 
