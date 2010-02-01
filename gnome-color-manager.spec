@@ -3,7 +3,7 @@
 
 Summary:   Color management tools for GNOME
 Name:      gnome-color-manager
-Version:   2.29.2
+Version:   2.29.3
 Release:   %mkrel 1
 License:   GPLv2+
 Group:     Graphical desktop/GNOME
