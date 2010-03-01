@@ -34,6 +34,7 @@ BuildRequires: gnome-desktop-devel
 BuildRequires: packagekit
 BuildRequires: lcms-devel
 BuildRequires: libcanberra-devel
+BuildRequires: libtiff-devel
 BuildRequires: docbook-utils
 BuildRequires: docbook-dtd41-sgml
 
