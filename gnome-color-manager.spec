@@ -3,12 +3,12 @@
 
 Summary:   Color management tools for GNOME
 Name:      gnome-color-manager
-Version:   2.29.4
+Version:   2.30.0
 Release:   %mkrel 1
 License:   GPLv2+
 Group:     Graphical desktop/GNOME
 URL:       http://projects.gnome.org/gnome-color-manager/
-Source0:   http://download.gnome.org/sources/gnome-color-manager/2.29/%{name}-%{version}.tar.bz2
+Source0:   http://download.gnome.org/sources/gnome-color-manager/%{name}-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
 Requires:  gnome-icon-theme
