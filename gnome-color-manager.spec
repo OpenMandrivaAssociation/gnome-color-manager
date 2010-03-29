@@ -25,6 +25,7 @@ BuildRequires: libtool
 BuildRequires: vte-devel
 BuildRequires: gnome-doc-utils
 BuildRequires: unique-devel >= %{unique_version}
+BuildRequires: libnotify-devel
 BuildRequires: intltool
 BuildRequires: libgudev-devel
 BuildRequires: dbus-glib-devel >= %{dbus_glib_version}
