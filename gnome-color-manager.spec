@@ -4,7 +4,7 @@
 Summary:   Color management tools for GNOME
 Name:      gnome-color-manager
 Version:   2.30.1
-Release:   %mkrel 1
+Release:   %mkrel 2
 License:   GPLv2+
 Group:     Graphical desktop/GNOME
 URL:       http://projects.gnome.org/gnome-color-manager/
@@ -26,7 +26,7 @@ BuildRequires: vte-devel
 BuildRequires: gnome-doc-utils
 BuildRequires: unique-devel >= %{unique_version}
 BuildRequires: libnotify-devel
-BuildRequires: libsane-devel
+BuildRequires: libsane-devel gphoto2-devel libv4l-devel
 BuildRequires: intltool
 BuildRequires: libgudev-devel
 BuildRequires: dbus-glib-devel >= %{dbus_glib_version}
@@ -49,7 +49,7 @@ install and generate color profiles in the GNOME desktop.
 %setup -q
 
 %build
-%configure2_5x --disable-scrollkeeper --disable-schemas-install --enable-hardware-detection
+%configure2_5x --disable-scrollkeeper --disable-schemas-install --enable-packagekit
 %make 
 
 %install
