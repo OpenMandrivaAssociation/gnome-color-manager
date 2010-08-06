@@ -40,7 +40,6 @@ BuildRequires: lcms-devel
 BuildRequires: libcanberra-devel
 BuildRequires: libtiff-devel
 BuildRequires: libexif-devel
-BuildRequires: libexiv2-devel
 BuildRequires: cups-devel
 BuildRequires: docbook-utils
 BuildRequires: docbook-dtd41-sgml
