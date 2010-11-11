@@ -37,7 +37,7 @@ BuildRequires: libxrandr-devel
 BuildRequires: gnome-desktop-devel
 BuildRequires: packagekit
 BuildRequires: lcms-devel
-BuildRequires: libcanberra-devel
+BuildRequires: libcanberra-gtk-devel
 BuildRequires: libtiff-devel
 BuildRequires: libexif-devel
 BuildRequires: cups-devel
