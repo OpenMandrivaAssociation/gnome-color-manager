@@ -4,11 +4,12 @@
 Summary:   Color management tools for GNOME
 Name:      gnome-color-manager
 Version:   2.32.0
-Release:   %mkrel 1
+Release:   %mkrel 2
 License:   GPLv2+
 Group:     Graphical desktop/GNOME
 URL:       http://projects.gnome.org/gnome-color-manager/
 Source0:   ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
+Patch0:	gnome-color-manager-2.32.0-libnotify-0.7.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
 Requires:  gnome-icon-theme
@@ -50,6 +51,7 @@ install and generate color profiles in the GNOME desktop.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
 %configure2_5x --disable-scrollkeeper --disable-schemas-install --enable-packagekit
