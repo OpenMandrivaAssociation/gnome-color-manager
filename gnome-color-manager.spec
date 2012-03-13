@@ -8,6 +8,7 @@ URL:       http://projects.gnome.org/gnome-color-manager/
 Source0:   ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.xz
 
 BuildRequires:	desktop-file-utils
+BuildRequires:	docbook-dtd41-sgml
 BuildRequires:	docbook-utils
 BuildRequires:	gnome-doc-utils
 BuildRequires:	intltool
