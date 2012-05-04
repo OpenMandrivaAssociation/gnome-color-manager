@@ -57,10 +57,10 @@ install and generate color profiles in the GNOME desktop.
 %files -f %{name}.lang
 %doc AUTHORS NEWS README
 %{_bindir}/gcm-*
+%{_libexecdir}/gcm-calibrate-helper
 %{_libexecdir}/gcm-helper-exiv
 %{_datadir}/%{name}
 %{_datadir}/applications/*.desktop
-%{_datadir}/dbus-1/services/org.gnome.ColorManager.service
 %{_datadir}/icons/hicolor/*/*/*.png
 %{_datadir}/icons/hicolor/scalable/*/*.svg
 %{_datadir}/man/man1/*
