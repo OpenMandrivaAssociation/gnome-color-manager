@@ -10,7 +10,7 @@ Source0:   ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.
 BuildRequires:	desktop-file-utils
 BuildRequires:	docbook-dtd41-sgml
 BuildRequires:	docbook-utils
-BuildRequires:	gnome-doc-utils
+BuildRequires:	pkgconfig(gnome-doc-utils)
 BuildRequires:	intltool
 BuildRequires:	pkgconfig(clutter-gtk-1.0)
 BuildRequires:	pkgconfig(colord)
