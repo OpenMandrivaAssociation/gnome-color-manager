@@ -13,6 +13,7 @@ BuildRequires:	desktop-file-utils
 BuildRequires:	docbook-dtd41-sgml
 BuildRequires:	docbook-utils
 BuildRequires:	intltool
+BuildRequires:	itstool
 BuildRequires:	pkgconfig(clutter-gtk-1.0)
 BuildRequires:	pkgconfig(colord)
 BuildRequires:	pkgconfig(colord-gtk)
