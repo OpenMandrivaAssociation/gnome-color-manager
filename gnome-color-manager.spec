@@ -1,23 +1,26 @@
+%define url_ver %(echo %{version}|cut -d. -f1,2)
+
 Summary:   Color management tools for GNOME
 Name:      gnome-color-manager
-Version:   3.4.2
+Version:   3.6.1
 Release:   1
 License:   GPLv2+
 Group:     Graphical desktop/GNOME
 URL:       http://projects.gnome.org/gnome-color-manager/
-Source0:   ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.xz
+Source0:   ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 
 BuildRequires:	desktop-file-utils
 BuildRequires:	docbook-dtd41-sgml
 BuildRequires:	docbook-utils
-BuildRequires:	pkgconfig(gnome-doc-utils)
 BuildRequires:	intltool
 BuildRequires:	pkgconfig(clutter-gtk-1.0)
 BuildRequires:	pkgconfig(colord)
+BuildRequires:	pkgconfig(colord-gtk)
 BuildRequires:	pkgconfig(exiv2)
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gnome-desktop-3.0)
+BuildRequires:	pkgconfig(gnome-doc-utils)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(lcms2)
 BuildRequires:	pkgconfig(libcanberra-gtk3)
@@ -57,11 +60,10 @@ install and generate color profiles in the GNOME desktop.
 %files -f %{name}.lang
 %doc AUTHORS NEWS README
 %{_bindir}/gcm-*
-%{_libexecdir}/gcm-calibrate-helper
 %{_libexecdir}/gcm-helper-exiv
 %{_datadir}/%{name}
 %{_datadir}/applications/*.desktop
 %{_datadir}/icons/hicolor/*/*/*.png
 %{_datadir}/icons/hicolor/scalable/*/*.svg
-%{_datadir}/man/man1/*
+%{_mandir}/man1/*
 
