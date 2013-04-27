@@ -1,13 +1,13 @@
 %define url_ver %(echo %{version}|cut -d. -f1,2)
 
-Summary:   Color management tools for GNOME
-Name:      gnome-color-manager
-Version:   3.6.1
-Release:   1
-License:   GPLv2+
-Group:     Graphical desktop/GNOME
-URL:       http://projects.gnome.org/gnome-color-manager/
-Source0:   ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
+Summary:	Color management tools for GNOME
+Name:		gnome-color-manager
+Version:	3.6.1
+Release:	1
+License:	GPLv2+
+Group:		Graphical desktop/GNOME
+Url:		http://projects.gnome.org/gnome-color-manager/
+Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 
 BuildRequires:	desktop-file-utils
 BuildRequires:	docbook-dtd41-sgml
@@ -33,9 +33,9 @@ BuildRequires:	pkgconfig(vte-2.90)
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xrandr)
 
-Requires: colord
-Requires: gnome-icon-theme
-Requires: shared-color-profiles
+Requires:	colord
+Requires:	gnome-icon-theme
+Requires:	shared-color-profiles
 
 %description
 gnome-color-manager is a session framework that makes it easy to manage, 
@@ -64,7 +64,7 @@ install and generate color profiles in the GNOME desktop.
 %{_libexecdir}/gcm-helper-exiv
 %{_datadir}/%{name}
 %{_datadir}/applications/*.desktop
-%{_datadir}/icons/hicolor/*/*/*.png
-%{_datadir}/icons/hicolor/scalable/*/*.svg
+%{_iconsdir}/hicolor/*/*/*.png
+%{_iconsdir}/hicolor/scalable/*/*.svg
 %{_mandir}/man1/*
 
