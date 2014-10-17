@@ -2,8 +2,8 @@
 
 Summary:	Color management tools for GNOME
 Name:		gnome-color-manager
-Version:	3.8.3
-Release:	7
+Version:	3.14.1
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
 Url:		http://projects.gnome.org/gnome-color-manager/
@@ -27,9 +27,7 @@ BuildRequires:	pkgconfig(lcms2)
 BuildRequires:	pkgconfig(libcanberra-gtk3)
 BuildRequires:	pkgconfig(libexif)
 BuildRequires:	pkgconfig(libtiff-4)
-BuildRequires:	pkgconfig(mash-0.2)
-BuildRequires:	pkgconfig(mx-1.0)
-BuildRequires:	pkgconfig(vte-2.90)
+BuildRequires:	pkgconfig(vte-2.91)
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xrandr)
 
@@ -46,9 +44,7 @@ install and generate color profiles in the GNOME desktop.
 %apply_patches
 
 %build
-%configure2_5x \
-	--disable-static \
-	--disable-scrollkeeper \
+%configure \
 	--enable-packagekit
 
 %make 
@@ -64,6 +60,7 @@ install and generate color profiles in the GNOME desktop.
 %{_libexecdir}/gcm-helper-exiv
 %{_datadir}/%{name}
 %{_datadir}/applications/*.desktop
+%{_datadir}/appdata/gcm-viewer.appdata.xml
 %{_iconsdir}/hicolor/*/*/*.png
 %{_iconsdir}/hicolor/scalable/*/*.svg
 %{_mandir}/man1/*
