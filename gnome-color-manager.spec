@@ -2,7 +2,7 @@
 
 Summary:	Color management tools for GNOME
 Name:		gnome-color-manager
-Version:	3.14.1
+Version:	 3.16.0
 Release:	3
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
@@ -36,7 +36,7 @@ Requires:	gnome-icon-theme
 Requires:	shared-color-profiles
 
 %description
-gnome-color-manager is a session framework that makes it easy to manage, 
+gnome-color-manager is a session framework that makes it easy to manage,
 install and generate color profiles in the GNOME desktop.
 
 %prep
@@ -47,7 +47,7 @@ install and generate color profiles in the GNOME desktop.
 %configure \
 	--enable-packagekit
 
-%make 
+%make
 
 %install
 %makeinstall_std
