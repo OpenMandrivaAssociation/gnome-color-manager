@@ -1,9 +1,10 @@
 %define url_ver %(echo %{version}|cut -d. -f1,2)
+%define _disable_rebuild_configure 1
 
 Summary:	Color management tools for GNOME
 Name:		gnome-color-manager
-Version:	 3.16.0
-Release:	5
+Version:	3.18.0
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
 Url:		http://projects.gnome.org/gnome-color-manager/
