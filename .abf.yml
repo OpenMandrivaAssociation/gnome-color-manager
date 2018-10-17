@@ -3,5 +3,6 @@ removed_sources:
   gnome-color-manager-3.16.0.tar.xz: d95b3281e2081707b173df7042a0193ad72bb219
   gnome-color-manager-3.4.2.tar.xz: 143644a936e0847aa6508ca2aa34e2099d74470c
   gnome-color-manager-3.8.3.tar.xz: d99e00ad044c435e56ea578ee258adeef7f23413
-sources:
   gnome-color-manager-3.18.0.tar.xz: 16f64aebe41e8549bea8756e86928b0294d63cef
+sources:
+  gnome-color-manager-3.30.0.tar.xz: 3336b283560177c00dd6d5352beda18c5aadeb5e
