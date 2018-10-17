@@ -3,8 +3,8 @@
 
 Summary:	Color management tools for GNOME
 Name:		gnome-color-manager
-Version:	3.18.0
-Release:	3
+Version:	3.30.0
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
 Url:		http://projects.gnome.org/gnome-color-manager/
@@ -31,6 +31,11 @@ BuildRequires:	pkgconfig(libtiff-4)
 BuildRequires:	pkgconfig(vte-2.91)
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xrandr)
+#BuildRequires:	pkgconfig(mash-0.2)
+BuildRequires:	libxml2-utils
+BuildRequires:	yelp-tools
+BuildRequires:	gnome-common
+BuildRequires:	meson
 
 Requires:	colord
 Requires:	gnome-icon-theme
@@ -45,24 +50,27 @@ install and generate color profiles in the GNOME desktop.
 %apply_patches
 
 %build
-%configure \
-	--enable-packagekit
-
-%make
+%meson
+%meson_build
 
 %install
-%makeinstall_std
+%meson_install
 
 %find_lang %name --with-gnome --all-name
 
+for file in %{buildroot}%{_datadir}/applications/*.desktop; do
+	desktop-file-edit "$file"
+done
+
 %files -f %{name}.lang
-%doc AUTHORS NEWS README
+%doc AUTHORS README
 %{_bindir}/gcm-*
 %{_libexecdir}/gcm-helper-exiv
 %{_datadir}/%{name}
 %{_datadir}/applications/*.desktop
-%{_datadir}/appdata/gcm-viewer.appdata.xml
+#{_datadir}/appdata/gcm-viewer.appdata.xml
 %{_iconsdir}/hicolor/*/*/*.png
 %{_iconsdir}/hicolor/scalable/*/*.svg
+%{_datadir}/metainfo/*.appdata.xml
 %{_mandir}/man1/*
 
