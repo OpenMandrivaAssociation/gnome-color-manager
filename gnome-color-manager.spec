@@ -31,6 +31,11 @@ BuildRequires:	pkgconfig(libtiff-4)
 BuildRequires:	pkgconfig(vte-2.91)
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xrandr)
+BuildRequires:	pkgconfig(mash-0.2)
+BuildRequires:	libxml2-utils
+BuildRequires:	yelp-tools
+BuildRequires:	gnome-common
+BuildRequires:	meson
 
 Requires:	colord
 Requires:	gnome-icon-theme
@@ -45,15 +50,17 @@ install and generate color profiles in the GNOME desktop.
 %apply_patches
 
 %build
-%configure \
-	--enable-packagekit
-
-%make
+%meson
+%meson_build
 
 %install
-%makeinstall_std
+%meson_install
 
 %find_lang %name --with-gnome --all-name
+
+for file in %{buildroot}%{_datadir}/applications/*.desktop; do
+	desktop-file-edit "$file"
+done
 
 %files -f %{name}.lang
 %doc AUTHORS NEWS README
