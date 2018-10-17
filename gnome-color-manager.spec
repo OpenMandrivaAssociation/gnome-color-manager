@@ -63,13 +63,14 @@ for file in %{buildroot}%{_datadir}/applications/*.desktop; do
 done
 
 %files -f %{name}.lang
-%doc AUTHORS NEWS README
+%doc AUTHORS README
 %{_bindir}/gcm-*
 %{_libexecdir}/gcm-helper-exiv
 %{_datadir}/%{name}
 %{_datadir}/applications/*.desktop
-%{_datadir}/appdata/gcm-viewer.appdata.xml
+#{_datadir}/appdata/gcm-viewer.appdata.xml
 %{_iconsdir}/hicolor/*/*/*.png
 %{_iconsdir}/hicolor/scalable/*/*.svg
+%{_datadir}/metainfo/*.appdata.xml
 %{_mandir}/man1/*
 
