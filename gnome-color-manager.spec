@@ -31,7 +31,7 @@ BuildRequires:	pkgconfig(libtiff-4)
 BuildRequires:	pkgconfig(vte-2.91)
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xrandr)
-BuildRequires:	pkgconfig(mash-0.2)
+#BuildRequires:	pkgconfig(mash-0.2)
 BuildRequires:	libxml2-utils
 BuildRequires:	yelp-tools
 BuildRequires:	gnome-common
