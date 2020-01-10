@@ -47,7 +47,7 @@ install and generate color profiles in the GNOME desktop.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 %meson
