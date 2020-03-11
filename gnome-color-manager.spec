@@ -65,7 +65,7 @@ done
 %files -f %{name}.lang
 %doc AUTHORS README
 %{_bindir}/gcm-*
-%{_libexecdir}/gcm-helper-exiv
+#%{_libexecdir}/gcm-helper-exiv
 %{_datadir}/%{name}
 %{_datadir}/applications/*.desktop
 #{_datadir}/appdata/gcm-viewer.appdata.xml
