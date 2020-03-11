@@ -3,7 +3,7 @@
 
 Summary:	Color management tools for GNOME
 Name:		gnome-color-manager
-Version:	3.32.0
+Version:	3.35.90
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
@@ -65,7 +65,7 @@ done
 %files -f %{name}.lang
 %doc AUTHORS README
 %{_bindir}/gcm-*
-%{_libexecdir}/gcm-helper-exiv
+#%{_libexecdir}/gcm-helper-exiv
 %{_datadir}/%{name}
 %{_datadir}/applications/*.desktop
 #{_datadir}/appdata/gcm-viewer.appdata.xml
