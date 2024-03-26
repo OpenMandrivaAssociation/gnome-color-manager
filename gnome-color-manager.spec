@@ -4,11 +4,11 @@
 Summary:	Color management tools for GNOME
 Name:		gnome-color-manager
 Version:	3.36.0
-Release:	9
+Release:	10
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
-Url:		http://projects.gnome.org/gnome-color-manager/
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
+Url:		https://projects.gnome.org/gnome-color-manager/
+Source0:	https://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 
 BuildRequires:	desktop-file-utils
 BuildRequires:	docbook-dtd41-sgml
