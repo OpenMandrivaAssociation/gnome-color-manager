@@ -3,8 +3,8 @@
 
 Summary:	Color management tools for GNOME
 Name:		gnome-color-manager
-Version:	3.36.0
-Release:	11
+Version:	3.36.2
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
 Url:		https://projects.gnome.org/gnome-color-manager/
@@ -46,8 +46,7 @@ gnome-color-manager is a session framework that makes it easy to manage,
 install and generate color profiles in the GNOME desktop.
 
 %prep
-%setup -q
-%autopatch -p1
+%autosetup -p1
 
 %build
 %meson
@@ -65,12 +64,9 @@ done
 %files -f %{name}.lang
 %doc AUTHORS README
 %{_bindir}/gcm-*
-#%{_libexecdir}/gcm-helper-exiv
 %{_datadir}/%{name}
 %{_datadir}/applications/*.desktop
-#{_datadir}/appdata/gcm-viewer.appdata.xml
 %{_iconsdir}/hicolor/*/*/*.png
 %{_iconsdir}/hicolor/scalable/*/*.svg
 %{_datadir}/metainfo/*.appdata.xml
 %{_mandir}/man1/*
-
