@@ -4,7 +4,7 @@
 Summary:	Color management tools for GNOME
 Name:		gnome-color-manager
 Version:	3.36.2
-Release:	3
+Release:	4
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
 Url:		https://projects.gnome.org/gnome-color-manager/
@@ -32,7 +32,7 @@ BuildRequires:	pkgconfig(vte-2.91)
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xrandr)
 #BuildRequires:	pkgconfig(mash-0.2)
-BuildRequires:	libxml2-utils
+BuildRequires:	libxml2-utils >= 2.15.2
 BuildRequires:	yelp-tools
 BuildRequires:	gnome-common
 BuildRequires:	meson
